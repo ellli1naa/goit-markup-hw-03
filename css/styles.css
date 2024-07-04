@@ -19,28 +19,37 @@ ul {
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 ul {
     margin: 0;
     padding: 0;
 }
 
-/* Контейнер */
-.container {
+.header .container {
+    display: flex;
     width: 1158px;
     margin: 0 auto;
+    padding: 0 15px 0 15px;
+    align-items: center;
 }
 
 /* Хедер */
 
 header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e7e9fc
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
 }
 
 .nav-link-studio {
@@ -49,6 +58,7 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding: 24px 0;
 }
 
 .nav-link-studio:hover,
@@ -58,6 +68,11 @@ header {
 
 .contact-info {
     font-style: normal;
+}
+
+.contact-list {
+    display: flex;
+    gap: 40px;
 }
 
 .contact-link {
@@ -85,16 +100,22 @@ header address ul li a {
     text-transform: uppercase;
     color: #4d5ae5;
     text-decoration: none;
+    margin-right: 76px;
 }
 
 .logo span {
     color: #2e2f42;
 }
 
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
 /* Герой секція */
 .hero {
     background-color: #2e2f42;
-    padding: 120px 0;
+    padding: 188px 0;
     text-align: center;
 }
 
@@ -103,6 +124,12 @@ header address ul li a {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #ffffff;
+    text-align: center;
+    max-width: 496px;
+    margin: 0 auto 24px;
+}
+
+.hero .container {
     text-align: center;
 }
 
@@ -114,7 +141,13 @@ header address ul li a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .hero-button:hover,
@@ -124,6 +157,19 @@ header address ul li a {
 
 /* Секція Solutions */
 
+.features {
+    padding: 120px 0;
+}
+
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
+.feature-item {
+    width: calc((100% - 72px) / 4);
+}
+
 .feature-title {
     font-size: 20px;
     font-weight: 500;
@@ -131,6 +177,7 @@ header address ul li a {
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-top: 40px;
+    margin-bottom: 8px;
 }
 
 .feature-description {
@@ -143,7 +190,13 @@ header address ul li a {
 /* Секція Team */
 .team {
     background-color: #F4F4FD;
-    padding: 64px 0;
+    padding: 120px 0;
+}
+
+.team .container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section-title {
@@ -154,18 +207,22 @@ header address ul li a {
     color: #2e2f42;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 72px;
 }
 
 .team-member {
     background-color: #FFFFFF;
-    width: 264px;
-    text-align: center;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
+}
+
+.team-info {
+    padding: 32px 0;
 }
 
 .team-member-name {
@@ -174,7 +231,8 @@ header address ul li a {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-member-role {
@@ -182,12 +240,20 @@ header address ul li a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    text-align: center;
 }
 
 /* Секція Portfolio */
 
 .portfolio {
-    padding: 64px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.portfolio .container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section-portfolio {
@@ -198,7 +264,7 @@ header address ul li a {
     color: #2e2f42;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 72px;
 }
 
 .portfolio-name {
@@ -207,18 +273,26 @@ header address ul li a {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-.portfolio ul {
+.portfolio-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
-.portfolio li {
-    width: 360px;
+.portfolio-item {
+    width: calc((100% - 48px) / 3);
     margin-bottom: 30px;
+}
+
+.portfolio-content {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .portfolio-role {
@@ -226,18 +300,21 @@ header address ul li a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    text-align: center;
 }
 
 /* Футер */
 footer {
     background-color: #2e2f42;
-    padding: 40px 0;
     text-align: center;
     border-top: 1px solid #ccc;
+    padding: 100px 0;
 }
 
 .foot .logo_ {
     color: #f4f4fd;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .foot-p {
@@ -247,4 +324,5 @@ footer {
     letter-spacing: 0.02em;
     margin: 12px auto;
     width: 400px;
+    max-width: 264px;
 }
