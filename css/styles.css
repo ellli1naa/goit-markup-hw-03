@@ -32,20 +32,19 @@ ul {
     padding: 0;
 }
 
-.header .container {
-    display: flex;
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px 0 15px;
-    align-items: center;
-}
-
 /* Хедер */
 
-header {
+.head {
     border-bottom: 1px solid #e7e9fc
 }
 
+.head .container {
+    display: flex;
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-items: center;
+}
 
 .navigation {
     display: flex;
@@ -313,6 +312,9 @@ footer {
 
 .foot .logo_ {
     color: #f4f4fd;
+}
+
+.foot .logo {
     display: inline-block;
     margin-bottom: 16px;
 }
