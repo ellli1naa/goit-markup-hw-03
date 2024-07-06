@@ -336,7 +336,7 @@ footer {
 
 .foot .logo {
     display: inline-block;
-    padding-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .foot-p {
